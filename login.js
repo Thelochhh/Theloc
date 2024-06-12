@@ -3,7 +3,7 @@ function Kt(){
     const password = document.getElementById('password').value;
 
 if(username == '' && password==''){
-    alert('Vui lòng nhập đầy đủ thông tin!');
+    alert('Vui lòng nhập đầy đủ thông tin thang ngu nay!');
 }
 else if(username != 'Theloc' && password != 'Theloc1610'){
         alert('Sai thông tin đăng nhập. Vui lòng thử lại!');
