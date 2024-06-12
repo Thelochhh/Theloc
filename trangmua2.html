@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Mua</title>
+    <link rel="stylesheet" href="trangmua1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-image">
+                    <img id="mainImage" src="img/nt2.webp" class="img-fluid" alt="Main Image" style="width: 350px;height:350px;">
+                </div>
+                <div class="product-thumbnails mt-3">
+                    <img src="img/hong1.webp" class="img-thumbnail" alt="Thumbnail 1" style="width: 70px;height:70px;"onclick="hien('img/hong1.webp')">
+                    <img src="img/hong2.webp" class="img-thumbnail" alt="Thumbnail 2" style="width: 70px;height:70px;"onclick="hien('img/hong2.webp')">
+                    <img src="img/hong3.webp" class="img-thumbnail" alt="Thumbnail 3" style="width: 70px;height:70px;"onclick="hien('img/hong3.webp')">
+                    <img src="img/hong4.webp" class="img-thumbnail" alt="Thumbnail 4" style="width: 70px;height:70px;"onclick="hien('img/hong4.webp')">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-info">
+                    <h2 class="product-name">GIÀY ĐÁ BÓNG NMS XABI WHITE/PINK</h2>
+                    <h2 class="product-name">Size</h2>
+                    <div class="radio-input">
+                        <label>
+                        <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
+                        <span>39</span>
+                        </label>
+                        <label>
+                          <input value="value-2" name="value-radio" id="value-2" type="radio">
+                        <span>40</span>
+                        </label>
+                        <label>
+                          <input value="value-3" name="value-radio" id="value-3" type="radio">
+                        <span>41</span>
+                        </label>
+                        <label>
+                          <input value="value-3" name="value-radio" id="value-3" type="radio">
+                        <span>42</span>
+                        </label>
+                      </div>
+                    <p class="product-price">Giá: 350k</p>
+                    <div class="product-actions">
+                        <button id="mua" class="btn btn-primary btn-buy" onclick="dathang()">Mua ngay</button>
+                        <button id="gh"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                        <a href = "trangchinh.html">Quay lại trang chủ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.img-thumbnail').click(function(){
+            var newSrc = $(this).attr('src');
+            $('#mainImage').attr('src', newSrc);
+        });
+    });
+
+    function displayImage(src) {
+        document.getElementById('mainImage').src = src;
+    }
+    function dathang(){
+        alert("Đặt hàng thành công!");
+    }
+    </script>
+</body>
+</html>
